@@ -7,7 +7,11 @@ const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
 });
 
-/* Add functionality here */
+app.command('/trailheaduser', async ({ command, ack, say }) => {
+    // Acknowledge command request
+    await ack();
+    await say(`${command.text}`);
+  });
 
 (async () => {
   // Start the app
