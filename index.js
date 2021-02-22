@@ -13,6 +13,10 @@ app.command('/trailheaduser', async ({ command, ack, say }) => {
     await say(`${command.text}`);
   });
 
+app.message('knock knock', async ({ message, say }) => {
+    await say(`_Who's there?_`);
+});
+
 (async () => {
   // Start the app
   await app.start(process.env.PORT || 3000);
